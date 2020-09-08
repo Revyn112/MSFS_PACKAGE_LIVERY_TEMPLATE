@@ -34,8 +34,10 @@ Nice to know: This is the pattern-rule of Asobo for 3rd parties / content creato
     |   +-- AirPlanes
     |   |   +-- [CREATOR_AIRCRAFT_TYPE]
     |   |   +-- aircraft.cfg
-    |   |   |   +-- TEXTURE.[YOUR_LIVERY_NAME]
-
+    |   |   |   +-- model
+    |   |   |   +-- model.AI_[YOUR_LIVERY_NAME]
+    |   |   |   +-- texture.[YOUR_LIVERY_NAME]
+    
 ##### 3. Add your texture files
 Add your texture files like before into the folder
 
@@ -63,51 +65,73 @@ Add your texture files like before into the folder
     wip_indicator = 0 ; know if the variation is good to go or still WIP : -1=Disabled, 0=Rough, 1=1st Pass, 2=Finished
     ui_manufacturer = "TT:AIRCRAFT.UI_MANUFACTURER"  ; e.g. Boeing, Cessna
     ui_type = "A320neo Custom"  ; e.g. 747-400, 172
-    ui_variation = "Berlin"  ; e.g. World Air, IFR Panel
+    ui_variation = "Custom"  ; e.g. World Air, IFR Panel
     ui_typerole = "Commercial Airliner"  ; e.g. Single Engine Prop, Twin Engine Prop, motorcraft, etc
-    ui_createdby = "Revyn112"  ; e.g. Asobo Studio, Microsoft, FSAddonCompany, etc
+    ui_createdby = "YOUR_NAME"  ; e.g. Asobo Studio, Microsoft, FSAddonCompany, etc
     ui_thumbnailfile = ""  ; app relative path to ThumbNail image file
     ui_certified_ceiling = 39800 ; service ceiling / max certified operating altitude (ft)
     ui_max_range = 3500 ; max distance the aircraft can fly between take-off and landing in (NM)
     ui_autonomy = 7 ; max duration the aircraft can fly between take-off and landing in (Hrs)
     ui_fuel_burn_rate = 5300 ; average fuel consumption per hour (lbs/hr) - reminder: fuel density is ~6.7lbs per US gallon
-    atc_id = "OE-IZQ"  ; tail number
+    atc_id = "T-TAIL"  ; tail number
     atc_id_enable = 1 ; enable tail number
-    atc_airline = "Airline"  ; airline name
-    icao_airline = "CUS"  ; airline icao code
+    atc_airline = "YOUR AIRLINE NAME"  ; airline name
     atc_flight_number = ""  ; flight number
     atc_heavy = 1 ; heavy?
     atc_parking_types = "GATE,RAMP,CARGO"  ; "ANY" / "RAMP" / "CARGO" / "MIL_CARGO" / "MIL_COMBAT" / "GATE" / "DOCK"
     atc_parking_codes = ""  ; Comma separated and may be as small as one character each
     atc_id_color = ""  ; color for the tail number : i.e. "#ffff00ff"
     atc_id_font = ""  ; font for the tail number
+    icao_airline = "CUS"  ; airline icao code
     isAirTraffic = 0 ; Is the plane usable for air traffic
-    isUserSelectable = 1 ; Is the plane selectable by the user    
+    isUserSelectable = 1 ; Is the plane selectable by the user   
+    
+    ;===================== FLTSIM AI DEFINTION =====================
+    [FLTSIM.1]
+    title = "Airbus A320 Neo Custom AI"  ; Variation name
+    model = "AI_CUSTOM"  ; model folder
+    panel = ""  ; panel folder
+    sound = ""  ; sound folder
+    texture = "CUSTOM"  ; texture folder
+    kb_checklists = "Boeing747-400_check"  ; Procedures/Checklist sibling file name
+    kb_reference = "Boeing747-400_ref"  ; Reference information sibling file name
+    description = "TT:AIRCRAFT.DESCRIPTION"  ; Variation description.
+    wip_indicator = 0 ; know if the variation is good to go or still WIP : -1=Disabled, 0=Rough, 1=1st Pass, 2=Finished
+    ui_manufacturer = "TT:AIRCRAFT.UI_MANUFACTURER"  ; e.g. Boeing, Cessna
+    ui_type = "A320neo Custom AI"  ; e.g. 747-400, 172
+    ui_variation = "Custom"  ; e.g. World Air, IFR Panel
+    ui_typerole = "Commercial Airliner"  ; e.g. Single Engine Prop, Twin Engine Prop, motorcraft, etc
+    ui_createdby = "YOUR_NAME"  ; e.g. Asobo Studio, Microsoft, FSAddonCompany, etc
+    ui_thumbnailfile = ""  ; app relative path to ThumbNail image file
+    ui_certified_ceiling = 39800 ; service ceiling / max certified operating altitude (ft)
+    ui_max_range = 3500 ; max distance the aircraft can fly between take-off and landing in (NM)
+    ui_autonomy = 7 ; max duration the aircraft can fly between take-off and landing in (Hrs)
+    ui_fuel_burn_rate = 5300 ; average fuel consumption per hour (lbs/hr) - reminder: fuel density is ~6.7lbs per US gallon
+    atc_id = "T-TAIL"  ; tail number
+    atc_id_enable = 1 ; enable tail number
+    atc_airline = "YOUR AIRLINE NAME"  ; airline name
+    atc_flight_number = ""  ; flight number
+    atc_heavy = 1 ; heavy?
+    atc_parking_types = "GATE,RAMP,CARGO"  ; "ANY" / "RAMP" / "CARGO" / "MIL_CARGO" / "MIL_COMBAT" / "GATE" / "DOCK"
+    atc_parking_codes = ""  ; Comma separated and may be as small as one character each
+    atc_id_color = ""  ; color for the tail number : i.e. "#ffff00ff"
+    atc_id_font = ""  ; font for the tail number
+    icao_airline = "CUS"  ; airline icao code
+    isAirTraffic = 1 ; Is the plane usable for air traffic
+    isUserSelectable = 0 ; Is the plane selectable by the user
 
 ##### 5. Setup the manifest.json
 Copy this content into the manifest.json
 
-    {
-	    "dependencies": [],
-	    "content_type": "AIRCRAFT",
-	    "title": "Your Package Name",
-	    "manufacturer": "Airbus",
-	    "creator": "Revyn112",
-	    "package_version": "0.1.0",
-	    "minimum_game_version": "1.7.12",
-	    "release_notes": {
-		    "neutral": {
-			    "LastUpdate": "",
-			    "OlderHistory": ""
-		    }
-	    }
-    }
+##### 6. Rename AI Model Folder Name
+Rename the folder "model.AI_CUSTOM" to your livery name.
+Remember to Adjust the Model Name in FLTSIM.1 Definition for AI Models.
 
-##### 6. Setup the layouts.json
+##### 7. Setup the layouts.json
 To create a layouts.json file you can use the JSON Tool of @S3RI0US. 
 Explanation and download you will find here: https://forums.flightsimulator.com/t/tool-mfs-2020-auto-json-for-layout-json/245505
 
-##### 7. You are ready for takeoff!
+##### 8. You are ready for takeoff!
 
 That's all - now you have to pack the files into a .zip archive and distribute them on the forum or on the countless hosting sites. The user just have to unpack your archive and drag'n'drop the packages into the community folder.
 Simple... Isn't It?
