@@ -1,0 +1,20 @@
+{
+  "dependencies": [
+    {
+      "name": "asobo-aircraft-a320-neo",
+      "package_version": "0.1.51"
+    }
+  ],
+  "content_type": "AIRCRAFT",
+  "title": "YOUR_TITLE",
+  "manufacturer": "Airbus",
+  "creator": "YOUR_NAME",
+  "package_version": "1.0.0",
+  "minimum_game_version": "1.7.12",
+  "release_notes": {
+    "neutral": {
+      "LastUpdate": "",
+      "OlderHistory": ""
+    }
+  }
+}
