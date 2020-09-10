@@ -1,0 +1,20 @@
+{
+  "dependencies": [
+    {
+      "name": "asobo-aircraft-b7478i",
+      "package_version": "0.1.47"
+    }
+  ],
+  "content_type": "AIRCRAFT",
+  "title": "YOUR_TITLE",
+  "manufacturer": "Boeing",
+  "creator": "YOUR_NAME",
+  "package_version": "1.0.0",
+  "minimum_game_version": "1.7.12",
+  "release_notes": {
+    "neutral": {
+      "LastUpdate": "",
+      "OlderHistory": ""
+    }
+  }
+}
