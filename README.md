@@ -80,20 +80,20 @@ Example:
 
     "MODEL.AI_AIRBERLIN_STANDARD"
 
-Be sure that `FLTSIM.0` (for player aircraft) parameters in `aircraft.CFG` are:
+Be sure that `FLTSIM.0` (for player aircraft) parameters in `aircraft.cfg` are:
     
     model = ""
     isAirTraffic: 0
     isUserSelectable = 1
 
-Be sure that `FLTSIM.1` (for ai aircraft) parameters in `aircraft.CFG` are:
+Be sure that `FLTSIM.1` (for ai aircraft) parameters in `aircraft.cfg` are:
     
     model = "AI_AIRBERLIN_STANDARD"  ; (The name of the Folder "MODEL.AI_[YOUR_LIVERY_NAME])
     isAirTraffic: 1
     isUserSelectable = 0
 
 
-If you don't want to use an seperate AI model remove both `model` folder and the `FLTSIM.1` defintion in the `aircraft.CFG`.
+If you don't want to use an seperate AI model remove both `model` folder and the `FLTSIM.1` defintion in the `aircraft.cfg`.
 
 
 ##### 5. Setup the aircraft.cfg
@@ -109,7 +109,7 @@ Adjust/Replace the followering parameters in `FLTSIM.0` and `FLTSIM.1` defintion
     atc_airline: "airberlin" (Name of the airline)
     icao_airline: "BER" (ICAO code of the airlin)
 
-Template of the `aircraft.CFG`
+Template of the `aircraft.cfg`
 
     [VERSION]
     major = 1
