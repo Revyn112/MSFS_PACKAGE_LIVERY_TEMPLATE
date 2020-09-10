@@ -238,4 +238,4 @@ Simple... Isn't It?
 
 
 ### Credits
-Originally found by OzWookiee @ fsdeveloper.com
+Drag'n'Drop method found by OzWookiee @ fsdeveloper.com
